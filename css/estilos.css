@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* Visualizacion */
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+/* Fuente (color y tamaño) */
+
+    html {
+    font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+    color: rgb(111, 121, 146) ;
+    background-color:rgb(255, 255, 255);
+    font-weight: 500;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+    color: rgb(46, 60, 114);
+    }
+
+    p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
+    }
+
+    p.little {
+    font-size: 0.9rem;
+    }
+
+    ul {
+    padding: 0;
+    list-style-type: none;
+    }
+
+    a {
+    color: inherit;
+    text-decoration: none;
+    }
+
+    .BotonPrimario {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background-color: rgb(63, 54, 205);
+    border-radius: 5px;
+    box-shadow: 4px 1px 15px rgba(46, 60, 114, 0.5);
+    }
+
+    .BotonSecundario {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgb(63, 54, 205);
+    background-color: rgb(241, 244, 255);
+    border: none;
+    border-radius: 5px;
+    }
+
+    .card {
+    border: 1px solid rgba(46, 60, 114, 0.05);
+    border-radius: 1rem;
+    transition: box-shadow 0.2s ease-in;
+    }
+
+    .card:hover {
+    box-shadow: 0px 1rem 2rem rgba(63, 54, 205, 0.1);
+    }
+
+/* Encabezado */
+
+  .header {
+    width: 100%;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .header__container {
+    padding: 2rem 0;
+    margin-inline: auto;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__logo {
+    font-size: 2rem;
+    color: rgb(63, 54, 205);
+  }
+
+  .header__nav {
+    display: grid;
+    place-content: center;
+  }
+
+  .header__links {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 3rem;
+  }
+
+  .header__link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.2s ease-in;
+  }
+
+  .header__link:hover {
+    color: rgb(63, 54, 205);
+  }
+
+
+/* Pie de Páqina */   
+
+    .footer {
+    background-color: rgb(241, 244, 255);
+    }
+
+    .footer__big {
+    padding-top: 4rem;
+    margin: 6rem auto 2rem;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    }
+
+    .footer__text h2 {
+    margin-bottom: 1rem;
+    color: rgb(63, 54, 205);
+    }
+
+    .footer__about p,
+    .footer__company p,
+    .footer__support p {
+    color: rgb(46, 60, 114);
+    font-weight: bold;
+    }
+
+    .footer__links {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 2rem;
+    }
+
+    .footer__link a {
+    transition: color 0.2s ease-in;
+    }
+
+    .footer__link a:hover {
+    color: rgb(46, 60, 114);
+    }
+
+    .footer__little {
+    padding-bottom: 1rem;
+    margin: 2rem auto 0;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    }
+
+/* Imagenes */    
+  .hero {
+    margin-inline: auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero__left {
+    padding-right: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero__right {
+    height: 100vh;
+  }
+
+  .hero__title {
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+
+  .hero__description {
+    padding-right: 6rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero__features {
+    display: flex;
+  }
+
+  .hero__feature {
+    display: flex;
+  }
+
+  .hero__feature div {
+    padding: 0.4rem;
+    background-color: #fdf9dc;
+    display: grid;
+    place-content: center;
+    border-radius: 5px;
+  }
+
+  .hero__feature svg {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .hero__image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .marcavacuna {
+    margin: 4rem auto 6rem;
+    max-width: 1200px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 4rem;
+    grid-auto-columns: 1fr;
+  }
+
+  .marcavacuna svg {
+    height: max-content;
+    width: 100%;
+    align-self: center;
+  }
+
+  .section {
+    margin-inline: auto;
+    max-width: 1200px;
+  }
+
+  .section__title {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .vacuna>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .benefits {
+    margin: 4rem 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 2rem;
+  }
+
+  .benefits__item {
+    padding: 2rem 2rem 4rem;
+  }
+
+  .benefits .card div {
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+    width: max-content;
+    background-color: rgb(234, 238, 255);
+    border: 2px solid rgb(255, 255, 255); 
+    display: grid;
+    place-content : center;
+    border-radius: 5px;
+  }
+
+  .benefits .card div svg {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .benefits__title {
+    margin-bottom: 1rem;
+  }
+
+  .beforeVaccine {
+    margin-bottom: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+  }
+
+  .beforeVaccine__left {
+    display: flex;
+    align-items: end;
+  }
+
+  .beforeVaccine__list {
+    margin-top: 4rem;
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+    grid-row-gap: 2rem;
+  }
+
+  .beforeVaccine__list .card {
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 1rem;
+    align-items: center;
+  }
+
+  .beforeVaccine__list .card div {
+    padding: 0.4rem;
+    width: max-content;
+    background-color: rgb(234, 238, 255);
+    border: 2px solid rgb(255, 255, 255);
+    display: grid;
+    place-content: center;
+    border-radius: 5px;
+  }
+
+  .beforeVaccine__list .card div svg {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .emergencyContact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+  }
+
+  .emergencyContact__right {
+    display: flex;
+    align-items: end;
+  }
+
+  .contactList {
+    margin-top: 2rem;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  .contactList__item {
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 2rem;
+  }
+
+  .contactList__item.card>div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 1rem;
+  }
+
+  .contactList__item.card>div>div:nth-child(1) {
+    padding: 0.4rem;
+    width: max-content;
+    background-color: rgb(234, 238, 255);
+    border: 2px solid rgb(255, 255, 255);
+    display: grid;
+    place-content: center;
+    border-radius: 5px;
+  }
+
+  /*.beforeVaccine__list.card>div>divnth-child(1) svg {
+    height: 1.5rem;
+    width: 1.5rem;
+  }*/
+
+  .contactList__item div div p {
+    color: rgb(46, 60, 114);
+  }
+
+  
